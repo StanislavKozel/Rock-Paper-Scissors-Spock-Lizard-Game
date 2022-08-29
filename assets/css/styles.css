@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ body {
+    max-width: 360px;
+    background-color: #ccc;
+ }
+ header {
+    padding: 20px;
+ }
+ h1 {
+    /* width: 100%auto; */
+    color: rgb(71, 71, 71);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+ }
+ .score {
+    border: 3px solid white;
+    width: 40%;
+    padding: 15px 20px;
+    margin: 10px auto;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+ }
+.label {
+    background: rgba(223, 5, 5, 0.651);
+    font-size: 14px;
+    padding: 2px 10px;
+}
+#user {
+    position: absolute;
+    top: 35%;
+    left: 0;
+}
+#computer {
+    position: absolute;
+    top: 35%;
+    right: 0%;
+}
+.results > p {
+    text-align: center;
+    font-weight: bold;
+}
+.choices {
+    text-align: center;
+}    
+.choice {
+    border: 5px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.choice:hover {
+    cursor: pointer;
+}

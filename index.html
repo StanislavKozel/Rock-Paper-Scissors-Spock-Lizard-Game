@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock,Paper,Scissors,Spock,Lizard</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Rock,Paper,Scissors,Spock,Lizard</title>
 </head>
 <body>
-    <h1>Rock,Paper,Scissors,Spock,Lizard</h1>
-
-    <div class="buttons">
-        <button class="button" id="new-game">New Game</button>
-        <button class="button" id="paper"><i class="fa-solid fa-hand"></i></button>
-        <button class="button" id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="button" id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
-        <button class="button" id="spock"><i class="fa-solid fa-hand-spock"></i></button>
-        <button class="button" id="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-        <button class="button" id="reset">Reset</button>
+    <header>
+        <h1>Rock,Paper,Scissors,Spock,Lizard</h1>
+    </header>
+    <div class="score">
+        <div id="user" class="label">You</div>
+        <div id="computer" class="label">Comp</div>
+        <span id="user-score">0</span>:<span id="comp-score">0</span>
     </div>
-    <div>
-        <h2>Results</h2>
-        <!-- <h3>No of games</h3> -->
-        <h3>You<span id="your-score"></span></h3>
-        <h3>Computer<span id="comp-score"></span></h3>
+    <div class="results">
+        <p>You win!</p>
     </div>
-    <footer>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-twitter"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-    </footer>
-    <script src="https://kit.fontawesome.com/1169993311.js" crossorigin="anonymous"></script>
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="assets/images/rock.png" alt="Image of a hand creating rock expression">
+        </div>
+        <div class="choice" id="paper">
+            <img src="assets/images/paper.png" alt="Image of a hand creating paper expression">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="assets/images/scissors.png" alt="Image of a hand creating scissors expression">
+        </div>
+        <div class="choice" id="spock">
+            <img src="assets/images/spock.png" alt="Image of a hand creating spock expression">
+        </div>
+        <div class="choice" id="lizard">
+            <img src="assets/images/lizard.png" alt="Image of a hand creating lizard expression">
+        </div>
+    </div> 
+    <script src="assets/script.js"></script>
 </body>
 </html>
