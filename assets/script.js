@@ -1,5 +1,5 @@
-const userScore = 0;
-const compScore = 0;
+let userScore = 0;
+let compScore = 0;
 const userScoreSpan = document.getElementById("user-score");
 const compScoreSpan = document.getElementById("comp-score");
 const scoreDiv = document.getElementsByClassName("score");
@@ -12,11 +12,59 @@ const lizardDiv = document.getElementById("lizard");
 
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors", "spock", "lizard"];
-    console.log(Math.random() * 3);
+    const randomNumber = Math.floor(Math.random() * 5);
+    return choices[randomNumber];
+}
+
+function win() {
+  userScore++;
+  userScoreSpan.innerHTML = userScore;
+  compScoreSpan.innerHTML = compScore;
+}
+
+function loose() {
+    console.log("lost")
+}
+
+function draw() {
+    console.log("draw")
 }
 
 function game(usersChoice) {
-
+  const computerChoice = getComputerChoice();
+  switch (usersChoice + computerChoice) {
+    case "scissorspaper":
+    case "scissorslizard":
+    case "paperrock":
+    case "paperspock":
+    case "rockscissors":
+    case "rocklizard":
+    case "lizardspock":
+    case "lizardpaper":
+    case "spockscissors":
+    case "spockrock":
+        win();
+        break;
+    case "paperscissors":
+    case "lizardscissors":
+    case "rockpaper":
+    case "spockpaper":
+    case "scissorsrock":
+    case "lizardrock":
+    case "spocklizard":
+    case "paperlizard":
+    case "scissorsspock":
+    case "rockspock":
+        loose();
+        break;
+    case "scissorsscissors":
+    case "paperpaper":
+    case "rockrock":
+    case "lizardlizard":
+    case "spockspock":
+        draw();
+        break;
+  }
 }
 
 function main() {
